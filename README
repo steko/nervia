@@ -1,0 +1,8 @@
+This is a Django project (`nervia`) and app (`magazzino`)
+to manage a physical storage space for archaeological finds.
+
+It is being developed in-house at the archaeological museum
+of ancient Albintimilium. It will likely be deployed on a local
+network.
+
+Current target dependencies are Django 1.5 and Python 3.2.
