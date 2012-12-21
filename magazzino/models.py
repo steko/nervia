@@ -6,6 +6,10 @@ from django.contrib.gis.db import models
 
 
 class Scavo(models.Model):
+    '''Scavo archeologico.
+
+    Probabilmente da ricondurre a una scheda ICCD SAS.'''
+
     nome = models.CharField(max_length=50)
     sigla = models.CharField(max_length=50, blank=True)
     luogo = models.CharField('Località', max_length=100)
@@ -18,7 +22,12 @@ class Scavo(models.Model):
         verbose_name_plural = "scavi"
 
 
-class Contesto(models.Model):
+class ContestoScavo(models.Model):
+    '''Unità stratigrafica, strato, livello o altro.
+
+    Un qualunque tipo di indicazione sulla provenienza del materiale
+    di scavo, in forma sintetica'''
+
     number = models.CharField(max_length=50)
     scavo = models.ForeignKey(Scavo)
 
@@ -30,6 +39,8 @@ class Contesto(models.Model):
 
 
 class Magazzino(models.Model):
+    '''Un magazzino.'''
+
     nome = models.CharField(max_length=50)
     descrizione = models.TextField()
 
@@ -41,6 +52,8 @@ class Magazzino(models.Model):
 
 
 class Vano(models.Model):
+    '''Un vano all'interno di un magazzino.'''
+
     number = models.IntegerField('Numero del vano')
     magazzino = models.ForeignKey(Magazzino)
     desc = models.TextField('Descrizione')
