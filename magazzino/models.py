@@ -22,7 +22,7 @@ class Contesto(models.Model):
     number = models.CharField(max_length=50)
     scavo = models.ForeignKey(Scavo)
 
-    def __unicode__(self):
+    def __str__(self):
         return "%s - %s" % (self.number, self.scavo)
 
     class Meta:
@@ -33,7 +33,7 @@ class Magazzino(models.Model):
     nome = models.CharField(max_length=50)
     descrizione = models.TextField()
 
-    def __unicode__(self):
+    def __str__(self):
         return self.nome
 
     class Meta:
@@ -45,8 +45,8 @@ class Vano(models.Model):
     magazzino = models.ForeignKey(Magazzino)
     desc = models.TextField('Descrizione')
 
-    def __unicode__(self):
-        return '%s %s' % (self.magazzino.__unicode__(), self.number)
+    def __str__(self):
+        return '%s %s' % (self.magazzino.__str__(), self.number)
 
     class Meta:
         verbose_name_plural = 'vani'
