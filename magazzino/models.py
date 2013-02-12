@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from django.contrib.gis.db import models
+from django.db import models
 
 # Create your models here.
 
@@ -80,10 +80,6 @@ class Cassa(models.Model):
     contenuto = models.TextField(blank=True, help_text='Descrizione estesa del contenuto')
     #contesto = models.ManyToManyField(Contesto, blank=True)
     materiale = models.CharField(max_length=100, blank=True)
-
-    # posizione
-    mpoly = models.PointField()
-    objects = models.GeoManager()
 
     # dati di scavo
     data_scavo = models.CharField(max_length=20, blank=True, help_text='Data dello scavo in formato AAAA-MM-GG')

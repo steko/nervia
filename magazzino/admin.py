@@ -9,7 +9,7 @@ class CassaAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Informazioni di base',
          {'fields': ['number', ('scavo', 'numscavo', 'data_scavo'), ('vano', 'posizione'),
-                     'contenuto', 'materiale', 'mpoly']}),
+                     'contenuto', 'materiale']}),
         ('CD - Codici', {'fields': ['tsk', 'lir', ('nctr', 'nctn'), ('esc', 'ecp')]}),
         ('OG - Oggetto', {'fields': ['scan', 'dscd']}),
         ('LC - Localizzazione geografico-amministrativa', {'fields': [('pvcs', 'pvcr', 'pvcp', 'pvcc')]}),
