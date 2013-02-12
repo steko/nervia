@@ -183,7 +183,7 @@ class Cassa(models.Model):
     cmpn = models.CharField('CMPN', help_text='Nome', max_length=100)
     fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=100)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.number
 
     class Meta:
