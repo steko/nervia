@@ -194,12 +194,61 @@ class Cassa(models.Model):
         verbose_name_plural = "casse"
 
 
-class ClasseMateriale(models.Model):
-    '''Classi di materiale.'''
+class FormaDiMateriale(models.Model):
+    '''Una forma di oggetto.
+
+    Corrisponde al campo OGTD della scheda TMA.'''
+
+    famiglia = models.CharField(max_length=100)
+    forma = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.forma
+
+    class Meta:
+        verbose_name_plural = 'forme di materiale'
+
+
+class ClasseDiMateriale(models.Model):
+    '''Classi di materiale.
+
+    Corrisponde al campo CLS della scheda TMA.'''
 
     classe = models.CharField('CLS', help_text='Classe', max_length=100)
     famiglia = models.CharField(max_length=50, blank=True)
+    forme = models.ManyToManyField(FormaDiMateriale)
+
+    def __str__(self):
+        return '%s - %s' % (self.famiglia, self.classe)
+
+    class Meta:
+        verbose_name_plural = "classi di materiale"
 
 
-class Materiale(models.Model):
-    pass
+class MaterialeInCassa(models.Model):
+    '''Singoli materiali in una cassa.'''
+
+    cassa = models.ForeignKey(Cassa)
+    classe = models.ForeignKey(ClasseDiMateriale, verbose_name='CLS - Classe')
+    isr = models.CharField('ISR - Iscrizioni', max_length=100, blank=True)
+    ogtd = models.ForeignKey(FormaDiMateriale,  verbose_name='OGTD - Forma')
+    ogtt = models.CharField('OGTT - Tipologia',
+                            max_length=200,
+                            help_text='',
+                            blank=True)
+
+    # conteggi
+    orli = models.IntegerField()
+    anse = models.IntegerField()
+    pareti = models.IntegerField()
+    fondi = models.IntegerField()
+    nme = models.IntegerField('NME', help_text='Numero minimo di esemplari')
+
+    # inventario
+    numeri_inventario = models.CharField(max_length=500)
+
+    def __str__(self):
+        return '%s in %s' % (self.classe, self.cassa)
+
+    class Meta:
+        verbose_name_plural = "materiali in cassa"

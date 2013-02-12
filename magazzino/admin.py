@@ -1,11 +1,14 @@
 from django.contrib import admin
 from magazzino.models import *
 
-for m in Scavo, Magazzino, Vano, Contesto:
+for m in Scavo, Magazzino, Vano, ContestoScavo, ClasseDiMateriale:
     admin.site.register(m)
 
+class MaterialeInline(admin.TabularInline):
+    model = MaterialeInCassa
+    extra = 3
+
 class CassaAdmin(admin.ModelAdmin):
-    
     fieldsets = [
         ('Informazioni di base',
          {'fields': ['number', ('scavo', 'numscavo', 'data_scavo'), ('vano', 'posizione'),
@@ -19,5 +22,7 @@ class CassaAdmin(admin.ModelAdmin):
         ('AD - Accesso ai dati', {'fields': [('adsp', 'adsm')]}),
         ('CM - Compilazione', {'fields': [('cmpd', 'cmpn'), 'fur']})
         ]
+
+    inlines = [MaterialeInline]
 
 admin.site.register(Cassa, CassaAdmin)
