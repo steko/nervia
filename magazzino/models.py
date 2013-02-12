@@ -89,8 +89,8 @@ class Cassa(models.Model):
     data_scavo = models.CharField(max_length=20, blank=True, help_text='Data dello scavo in formato AAAA-MM-GG')
 
     # CD - Codici
-    tsk = models.CharField('TSK', help_text='Tipo scheda', max_length=100)
-    lir = models.CharField('LIR', help_text='Livello ricerca', max_length=100)
+    tsk = models.CharField('TSK', help_text='Tipo scheda', max_length=4)
+    lir = models.CharField('LIR', help_text='Livello ricerca', max_length=5)
     ## NCT - Codice univoco
     NCTR_CODICI = (
         # codici ICCD
@@ -121,33 +121,33 @@ class Cassa(models.Model):
                             choices=NCTR_CODICI)
     nctn = models.CharField('NCTN',
                             help_text='Numero catalogo generale',
-                            max_length=30,
+                            max_length=8,
                             unique=True)
-    esc = models.CharField('ESC', help_text='Ente schedatore', max_length=100) 
-    ecp = models.CharField('ECP', help_text='Ente competente', max_length=100)
+    esc = models.CharField('ESC', help_text='Ente schedatore', max_length=25)
+    ecp = models.CharField('ECP', help_text='Ente competente', max_length=25)
 
     # OG - Oggetto
     ## OGT - Oggetto = Cassa
-    scan = models.CharField('SCAN', help_text='Area', max_length=100)
+    scan = models.CharField('SCAN', help_text='Denominazione dello scavo', max_length=100)
     # elenco delle US
-    dscd = models.CharField('DSCD', max_length=200)
+    dscd = models.CharField('DSCD', help_text='Data', max_length=50)
     # elenco dei numeri di inventario
 
     # LC - Localizzazione geografico-amministrativa
     ## PVC LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE
     pvcs = models.CharField('PVCS', help_text='Stato', max_length=50, default='Italia')
-    pvcr = models.CharField('PVCR', help_text='Regione', max_length=30)
-    pvcp = models.CharField('PVCP', help_text='Provincia', max_length=30) 
-    pvcc = models.CharField('PVCC', help_text='Comune', max_length=100) 
+    pvcr = models.CharField('PVCR', help_text='Regione', max_length=25)
+    pvcp = models.CharField('PVCP', help_text='Provincia', max_length=3)
+    pvcc = models.CharField('PVCC', help_text='Comune', max_length=50)
 
     # DT CRONOLOGIA 
     ## DTZ CRONOLOGIA GENERICA 
     dtzg = models.CharField('DTZG',
                             help_text='Fascia cronologica di riferimento',
-                            max_length=100)
+                            max_length=50)
     dtm = models.CharField('DTM',
                            help_text='Motivazione cronologia',
-                           max_length=200)
+                           max_length=250)
 
     # MA MATERIALE
     ## MAC MATERIALE COMPONENTE 
@@ -156,12 +156,12 @@ class Cassa(models.Model):
 
     # TU CONDIZIONE GIURIDICA E VINCOLI 
     ## CDG CONDIZIONE GIURIDICA 
-    cdgg = models.CharField('CDGG', help_text='Indicazione generica', max_length=100)
+    cdgg = models.CharField('CDGG', help_text='Indicazione generica', max_length=50)
 
     # AD ACCESSO AI DATI 
     ## ADS SPECIFICHE DI ACCESSO AI DATI 
-    adsp = models.CharField('ADSP', help_text='Profilo di accesso', max_length=100)
-    adsm = models.CharField('ADSM', help_text='Motivazione', max_length=100)
+    adsp = models.CharField('ADSP', help_text='Profilo di accesso', max_length=1)
+    adsm = models.CharField('ADSM', help_text='Motivazione', max_length=70)
 
     # FTA DOCUMENTAZIONE FOTOGRAFICA
     # FTAX', help_text='genere
@@ -180,8 +180,8 @@ class Cassa(models.Model):
     # CM COMPILAZIONE 
     ## CMP COMPILAZIONE 
     cmpd = models.DateField('CMPD', help_text='Data')
-    cmpn = models.CharField('CMPN', help_text='Nome', max_length=100)
-    fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=100)
+    cmpn = models.CharField('CMPN', help_text='Nome', max_length=70)
+    fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=70)
 
     def __str__(self):
         return self.number
