@@ -73,16 +73,22 @@ class Cassa(models.Model):
     # informazioni di base
     number = models.CharField('Numero di cassa', max_length=50)
     scavo = models.ForeignKey(Scavo, blank=True)
-    numscavo = models.IntegerField('Numero di cassa dello scavo', blank=True, help_text='Il numero di cassa nella numerazione dello scavo, se presente')
+    numscavo = models.IntegerField(
+        'Numero di cassa dello scavo',
+        blank=True,
+        help_text='Il numero di cassa nella numerazione dello scavo, se presente'
+        )
     vano = models.ForeignKey(Vano)
     posizione = models.CharField(help_text='Scaffale, colonna o altro',
                                  max_length=100)
-    contenuto = models.TextField(blank=True, help_text='Descrizione estesa del contenuto')
-    #contesto = models.ManyToManyField(Contesto, blank=True)
+    contenuto = models.TextField(blank=True,
+                                 help_text='Descrizione estesa del contenuto')
     materiale = models.CharField(max_length=100, blank=True)
 
     # dati di scavo
-    data_scavo = models.CharField(max_length=20, blank=True, help_text='Data dello scavo in formato AAAA-MM-GG')
+    data_scavo = models.CharField(max_length=20,
+                                  blank=True,
+                                  help_text='Data dello scavo in formato AAAA-MM-GG')
 
     # CD - Codici
     tsk = models.CharField('TSK', help_text='Tipo scheda', max_length=4)
@@ -124,7 +130,9 @@ class Cassa(models.Model):
 
     # OG - Oggetto
     ## OGT - Oggetto = Cassa
-    scan = models.CharField('SCAN', help_text='Denominazione dello scavo', max_length=100)
+    scan = models.CharField('SCAN',
+                            help_text='Denominazione dello scavo',
+                            max_length=100)
     # elenco delle US
     dscd = models.CharField('DSCD', help_text='Data', max_length=50)
     # elenco dei numeri di inventario
