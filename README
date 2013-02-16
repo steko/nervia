@@ -5,4 +5,4 @@ It is being developed in-house at the archaeological museum
 of ancient Albintimilium. It will likely be deployed on a local
 network.
 
-Current target dependencies are Django 1.5 and Python 3.2.
+Current target dependencies are Django 1.5 and Python 2.7.

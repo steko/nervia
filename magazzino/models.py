@@ -31,7 +31,7 @@ class ContestoScavo(models.Model):
     number = models.CharField(max_length=50)
     scavo = models.ForeignKey(Scavo)
 
-    def __str__(self):
+    def __unicode__(self):
         return "%s - %s" % (self.number, self.scavo)
 
     class Meta:
@@ -44,7 +44,7 @@ class Magazzino(models.Model):
     nome = models.CharField(max_length=50)
     descrizione = models.TextField()
 
-    def __str__(self):
+    def __unicode__(self):
         return self.nome
 
     class Meta:
@@ -58,7 +58,7 @@ class Vano(models.Model):
     magazzino = models.ForeignKey(Magazzino)
     desc = models.TextField('Descrizione')
 
-    def __str__(self):
+    def __unicode__(self):
         return '%s %s' % (self.magazzino.__str__(), self.number)
 
     class Meta:
@@ -187,7 +187,7 @@ class Cassa(models.Model):
     cmpn = models.CharField('CMPN', help_text='Nome', max_length=70)
     fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=70)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.number
 
     class Meta:
@@ -202,7 +202,7 @@ class FormaDiMateriale(models.Model):
     famiglia = models.CharField(max_length=100)
     forma = models.CharField(max_length=100)
 
-    def __str__(self):
+    def __unicode__(self):
         return self.forma
 
     class Meta:
@@ -218,8 +218,12 @@ class ClasseDiMateriale(models.Model):
     famiglia = models.CharField(max_length=50, blank=True)
     forme = models.ManyToManyField(FormaDiMateriale)
 
-    def __str__(self):
-        return '%s - %s' % (self.famiglia, self.classe)
+    def __unicode__(self):
+        cls_str = ''
+        if self.famiglia:
+            cls_str += '%s - ' % (self.famiglia)
+        cls_str += self.classe
+        return cls_str
 
     class Meta:
         verbose_name_plural = "classi di materiale"
@@ -247,7 +251,7 @@ class MaterialeInCassa(models.Model):
     # inventario
     numeri_inventario = models.CharField(max_length=500)
 
-    def __str__(self):
+    def __unicode__(self):
         return '%s in %s' % (self.classe, self.cassa)
 
     class Meta:
