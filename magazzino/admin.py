@@ -1,8 +1,13 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib import admin
 from magazzino.models import *
 
-for m in Scavo, Magazzino, Vano, ContestoScavo, ClasseDiMateriale:
+for m in Scavo, Magazzino, Vano, ContestoScavo, FormaDiMateriale:
     admin.site.register(m)
+
+class ClasseAdmin(admin.ModelAdmin):
+    filter_horizontal = ['forme']
 
 class MaterialeInline(admin.TabularInline):
     model = MaterialeInCassa
@@ -26,3 +31,4 @@ class CassaAdmin(admin.ModelAdmin):
     inlines = [MaterialeInline]
 
 admin.site.register(Cassa, CassaAdmin)
+admin.site.register(ClasseDiMateriale, ClasseAdmin)

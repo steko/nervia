@@ -200,13 +200,17 @@ class FormaDiMateriale(models.Model):
     Corrisponde al campo OGTD della scheda TMA.'''
 
     famiglia = models.CharField(max_length=100)
-    forma = models.CharField(max_length=100)
+    forma = models.CharField('OGTD',
+                             help_text='Forma',
+                             max_length=100)
 
     def __unicode__(self):
         return self.forma
 
     class Meta:
         verbose_name_plural = 'forme di materiale'
+        ordering = ['pk']
+        unique_together = ('famiglia', 'forma')
 
 
 class ClasseDiMateriale(models.Model):
@@ -214,9 +218,11 @@ class ClasseDiMateriale(models.Model):
 
     Corrisponde al campo CLS della scheda TMA.'''
 
-    classe = models.CharField('CLS', help_text='Classe', max_length=100)
+    classe = models.CharField('CLS',
+                              help_text='Classe',
+                              max_length=100)
     famiglia = models.CharField(max_length=50, blank=True)
-    forme = models.ManyToManyField(FormaDiMateriale)
+    forme = models.ManyToManyField(FormaDiMateriale, blank=True)
 
     def __unicode__(self):
         cls_str = ''
@@ -227,6 +233,8 @@ class ClasseDiMateriale(models.Model):
 
     class Meta:
         verbose_name_plural = "classi di materiale"
+        ordering = ['pk']
+        unique_together = ('classe', 'famiglia')
 
 
 class MaterialeInCassa(models.Model):
