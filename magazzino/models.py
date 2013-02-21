@@ -207,6 +207,10 @@ class FormaDiMateriale(models.Model):
     def __unicode__(self):
         return self.forma
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ("id__iexact", "forma__icontains", 'famiglia__icontains')
+
     class Meta:
         verbose_name_plural = 'forme di materiale'
         ordering = ['pk']
@@ -231,6 +235,10 @@ class ClasseDiMateriale(models.Model):
         cls_str += self.classe
         return cls_str
 
+    @staticmethod
+    def autocomplete_search_fields():
+        return ('id__iexact', 'classe__icontains', 'famiglia__icontains')
+
     class Meta:
         verbose_name_plural = "classi di materiale"
         ordering = ['pk']
@@ -246,7 +254,7 @@ class MaterialeInCassa(models.Model):
     ogtd = models.ForeignKey(FormaDiMateriale,  verbose_name='OGTD - Forma')
     ogtt = models.CharField('OGTT - Tipologia',
                             max_length=200,
-                            help_text='',
+                            help_text='Tipologia, es “Lamboglia 9” o “Dressel 23”',
                             blank=True)
 
     # conteggi
