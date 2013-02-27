@@ -168,18 +168,18 @@ class Cassa(models.Model):
     adsm = models.CharField('ADSM', help_text='Motivazione', max_length=70)
 
     # FTA DOCUMENTAZIONE FOTOGRAFICA
-    # FTAX', help_text='genere
-    # FTAD - data
-    # FTAT - note
+    ftax = models.CharField('FTAX', help_text='genere', max_length=50)
+    ftad = models.CharField('FTAD', help_text='data', max_length=25)
+    ftat = models.TextField('FTAT', help_text='note', max_length=250)
 
     # DRA DOCUMENTAZIONE GRAFICA
-    # DRAX - genere
-    # DRAT - tipo
-    # DRAO - note
-    # DRAS - scala
-    # DRAC - collocazione
-    # DRAA - autore
-    # DRAD - data
+    drax = models.CharField('DRAX', help_text='genere', max_length=25)
+    drat = models.CharField('DRAT', help_text='tipo', max_length=50)
+    drao = models.TextField('DRAO', help_text='note', max_length=250)
+    dras = models.CharField('DRAS', help_text='scala', max_length=25)
+    drac = models.CharField('DRAC', help_text='collocazione', max_length=50)
+    draa = models.CharField('DRAA', help_text='autore', max_length=50)
+    drad = models.CharField('DRAD', help_text='data', max_length=25)
 
     # CM COMPILAZIONE 
     ## CMP COMPILAZIONE 
