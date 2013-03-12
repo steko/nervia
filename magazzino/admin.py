@@ -9,8 +9,14 @@ for m in Scavo, Magazzino, Vano, ContestoScavo, FormaDiMateriale:
 class ClasseAdmin(admin.ModelAdmin):
     filter_horizontal = ['forme']
 
-class MaterialeInline(admin.TabularInline):
+class MaterialeInline(admin.StackedInline):
     model = MaterialeInCassa
+    fieldsets = [
+        (None, {'fields' : ['classe', 'ogtd']}),
+        (None, {'fields' : ['ogtt', 'isr']}),
+        (None, {'fields' : ['orli', 'anse', 'pareti', 'fondi', 'nme']}),
+        (None, {'fields' : ['numeri_inventario']}),
+        ]
     extra = 3
 
 class CassaAdmin(admin.ModelAdmin):
