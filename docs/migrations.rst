@@ -1,3 +1,7 @@
+====================================
+ Migrations and initial development
+====================================
+
 Hint from http://regebro.wordpress.com/2013/01/25/non-obvious-beginners-hint-for-development-with-django-and-south/
 
 Using Django and South for initial development, that is when you are
