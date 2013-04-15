@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.core.validators import RegexValidator
 
 # Create your models here.
 
@@ -124,7 +125,8 @@ class Cassa(models.Model):
     nctn = models.CharField('NCTN',
                             help_text='Numero catalogo generale',
                             max_length=8,
-                            unique=True)
+                            unique=True,
+                            validators=[RegexValidator('[0-9]'*8)])
     esc = models.CharField('ESC', help_text='Ente schedatore', max_length=25)
     ecp = models.CharField('ECP', help_text='Ente competente', max_length=25)
 
