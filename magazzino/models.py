@@ -77,8 +77,8 @@ class Cassa(models.Model):
     numscavo = models.IntegerField(
         'Numero di cassa dello scavo',
         blank=True,
-        help_text='Il numero di cassa nella numerazione dello scavo, se presente'
-        )
+        null=True,
+        help_text='Il numero di cassa nella numerazione dello scavo, se presente')
     vano = models.ForeignKey(Vano)
     posizione = models.CharField(help_text='Scaffale, colonna o altro',
                                  max_length=100)
@@ -86,14 +86,21 @@ class Cassa(models.Model):
                                  help_text='Descrizione estesa del contenuto')
     materiale = models.CharField(max_length=100, blank=True)
 
-    # dati di scavo
-    data_scavo = models.CharField(max_length=20,
-                                  blank=True,
-                                  help_text='Data dello scavo in formato AAAA-MM-GG')
-
     # CD - Codici
-    tsk = models.CharField('TSK', help_text='Tipo scheda', max_length=4)
-    lir = models.CharField('LIR', help_text='Livello ricerca', max_length=5)
+    tsk = models.CharField('TSK',
+                           help_text='Tipo scheda',
+                           max_length=4,
+                           default='TMA',
+                           editable=False)
+    LIR_CHOICES = (
+        ('I', 'Inventario'),
+        ('P', 'Precatalogo'),
+        ('C', 'Catalogo'),
+        )
+    lir = models.CharField('LIR',
+                           help_text='Livello ricerca',
+                           max_length=5,
+                           choices=LIR_CHOICES)
     ## NCT - Codice univoco
     NCTR_CODICI = (
         # codici ICCD
@@ -127,24 +134,42 @@ class Cassa(models.Model):
                             max_length=8,
                             unique=True,
                             validators=[RegexValidator('[0-9]'*8)])
-    esc = models.CharField('ESC', help_text='Ente schedatore', max_length=25)
-    ecp = models.CharField('ECP', help_text='Ente competente', max_length=25)
+    esc = models.CharField('ESC',
+                           help_text='Ente schedatore',
+                           max_length=25,
+                           default='S19')
+    ecp = models.CharField('ECP',
+                           help_text='Ente competente',
+                           max_length=25,
+                           default='S19')
 
     # OG - Oggetto
     ## OGT - Oggetto = Cassa
     scan = models.CharField('SCAN',
                             help_text='Denominazione dello scavo',
                             max_length=100)
-    # elenco delle US
-    dscd = models.CharField('DSCD', help_text='Data', max_length=50)
-    # elenco dei numeri di inventario
+    dscd = models.CharField('DSCD',
+                            help_text='Data in cui è stato effettuato l’intervento di scavo archeologico',
+                            max_length=50)
 
     # LC - Localizzazione geografico-amministrativa
     ## PVC LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE
     pvcs = models.CharField('PVCS', help_text='Stato', max_length=50, default='Italia')
-    pvcr = models.CharField('PVCR', help_text='Regione', max_length=25)
-    pvcp = models.CharField('PVCP', help_text='Provincia', max_length=3)
-    pvcc = models.CharField('PVCC', help_text='Comune', max_length=50)
+    pvcr = models.CharField('PVCR', help_text='Regione', max_length=25, default='Liguria')
+    pvcp = models.CharField('PVCP', help_text='Provincia', max_length=3, default='IM')
+    pvcc = models.CharField('PVCC', help_text='Comune', max_length=50, default='Ventimiglia')
+
+    # LDC - Collocazione specifica
+    ldct = models.CharField('LDCT',
+                            help_text='Tipologia del contenitore',
+                            max_length=25,
+                            default='magazzino')
+    ldcn = models.CharField('LDCN',
+                            help_text='Denominazione magazzino',
+                            max_length=50)
+    ldcs = models.CharField('LDCS',
+                            help_text='Specifiche: vano, sala, corridoio, colonna',
+                            max_length=50)
 
     # DT CRONOLOGIA 
     ## DTZ CRONOLOGIA GENERICA 
@@ -260,14 +285,33 @@ class MaterialeInCassa(models.Model):
                             blank=True)
 
     # conteggi
+
+    help_text_inv = '''Numeri singoli separati da barre es. 123/124/125
+oppure intervalli di numeri separati da trattino es. 123-126'''
+
     orli = models.IntegerField()
+    numeri_inventario_orli = models.CharField(max_length=500,
+                                              help_text=help_text_inv)
+
     anse = models.IntegerField()
-    pareti = models.IntegerField()
+    numeri_inventario_anse = models.CharField(max_length=500,
+                                              help_text=help_text_inv)
+
     fondi = models.IntegerField()
+    numeri_inventario_fondi = models.CharField(max_length=500,
+                                               help_text=help_text_inv)
+
+    piedi = models.IntegerField()
+    numeri_inventario_piedi = models.CharField(max_length=500,
+                                               help_text=help_text_inv)
+
+    pareti = models.IntegerField()
+    numeri_inventario_pareti = models.CharField(max_length=500,
+                                                 help_text=help_text_inv)
+
     nme = models.IntegerField('NME', help_text='Numero minimo di esemplari')
 
     # inventario
-    numeri_inventario = models.CharField(max_length=500)
 
     def __unicode__(self):
         return '%s in %s' % (self.classe, self.cassa)
