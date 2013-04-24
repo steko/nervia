@@ -60,7 +60,7 @@ class Vano(models.Model):
     desc = models.TextField('Descrizione')
 
     def __unicode__(self):
-        return '%s %s' % (self.magazzino.__str__(), self.number)
+        return u'%s %s' % (self.magazzino.__str__(), self.number)
 
     class Meta:
         verbose_name_plural = 'vani'
@@ -259,7 +259,7 @@ class ClasseDiMateriale(models.Model):
     def __unicode__(self):
         cls_str = self.sigla
         if self.famiglia:
-            cls_str += '%s - ' % (self.famiglia)
+            cls_str += u'%s - ' % (self.famiglia)
         cls_str += self.classe
         return cls_str
 
@@ -315,7 +315,7 @@ oppure intervalli di numeri separati da trattino es. 123-126'''
     # inventario
 
     def __unicode__(self):
-        return '%s in %s' % (self.classe, self.cassa)
+        return u'%s in %s' % (self.classe, self.cassa)
 
     class Meta:
         verbose_name_plural = "materiali in cassa"
