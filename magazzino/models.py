@@ -100,7 +100,8 @@ class Cassa(models.Model):
     lir = models.CharField('LIR',
                            help_text='Livello ricerca',
                            max_length=5,
-                           choices=LIR_CHOICES)
+                           choices=LIR_CHOICES,
+                           default='I')
     ## NCT - Codice univoco
     NCTR_CODICI = (
         # codici ICCD
@@ -128,7 +129,8 @@ class Cassa(models.Model):
     nctr = models.CharField('NCTR',
                             help_text='Codice regione',
                             max_length=2,
-                            choices=NCTR_CODICI)
+                            choices=NCTR_CODICI,
+                            default='07')
     nctn = models.CharField('NCTN',
                             help_text='Numero catalogo generale',
                             max_length=8,
@@ -187,12 +189,26 @@ class Cassa(models.Model):
 
     # TU CONDIZIONE GIURIDICA E VINCOLI 
     ## CDG CONDIZIONE GIURIDICA 
-    cdgg = models.CharField('CDGG', help_text='Indicazione generica', max_length=50)
+    cdgg = models.CharField('CDGG',
+                            help_text='Condizione giuridica - Indicazione generica',
+                            max_length=50,
+                            default='proprietà Stato')
 
     # AD ACCESSO AI DATI 
     ## ADS SPECIFICHE DI ACCESSO AI DATI 
-    adsp = models.CharField('ADSP', help_text='Profilo di accesso', max_length=1)
-    adsm = models.CharField('ADSM', help_text='Motivazione', max_length=70)
+    ADSP_CHOICES = (
+        ('1', 'intera scheda visibile'),
+        ('2', 'limitazione per privacy e tutela')
+        )
+    adsp = models.CharField('ADSP',
+                            help_text='Profilo di accesso',
+                            max_length=1,
+                            choices=ADSP_CHOICES,
+                            default='1')
+    adsm = models.CharField('ADSM',
+                            help_text='Motivazione',
+                            max_length=70,
+                            default='dati liberamente accessibili')
 
     # FTA DOCUMENTAZIONE FOTOGRAFICA
     ftax = models.CharField('FTAX', help_text='genere', max_length=50)
@@ -311,8 +327,6 @@ oppure intervalli di numeri separati da trattino es. 123-126'''
                                                  help_text=help_text_inv)
 
     nme = models.IntegerField('NME', help_text='Numero minimo di esemplari')
-
-    # inventario
 
     def __unicode__(self):
         return u'%s in %s' % (self.classe, self.cassa)
