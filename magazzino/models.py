@@ -252,11 +252,12 @@ class ClasseDiMateriale(models.Model):
     classe = models.CharField('CLS',
                               help_text='Classe',
                               max_length=100)
+    sigla = models.CharField(max_length=12, help_text='Sigla della classe', unique=True)
     famiglia = models.CharField(max_length=50, blank=True)
     forme = models.ManyToManyField(FormaDiMateriale, blank=True)
 
     def __unicode__(self):
-        cls_str = ''
+        cls_str = self.sigla
         if self.famiglia:
             cls_str += '%s - ' % (self.famiglia)
         cls_str += self.classe
