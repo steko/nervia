@@ -18,17 +18,21 @@ class MaterialeInline(admin.StackedInline):
     fieldsets = [
         (None, {'fields' : ['classe', 'ogtd']}),
         (None, {'fields' : ['ogtt', 'isr']}),
-        (None, {'fields' : ['orli', 'anse', 'pareti', 'fondi', 'nme']}),
-        (None, {'fields' : ['numeri_inventario']}),
+        (None, {'fields' : [('orli', 'numeri_inventario_orli'),
+                            ('anse', 'numeri_inventario_anse'),
+                            ('pareti', 'numeri_inventario_pareti'),
+                            ('fondi', 'numeri_inventario_fondi'),
+                            ('piedi', 'numeri_inventario_piedi'),
+                            'nme']}),
         ]
     extra = 3
 
 class CassaAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Informazioni di base',
-         {'fields': ['number', 'scavo', ('numscavo', 'data_scavo'), ('vano', 'posizione'),
+         {'fields': ['number', 'scavo', 'numscavo', ('vano', 'posizione'),
                      'contenuto', 'materiale']}),
-        ('CD - Codici', {'fields': [('tsk', 'lir'), ('nctr', 'nctn'), ('esc', 'ecp')]}),
+        ('CD - Codici', {'fields': [('lir'), ('nctr', 'nctn'), ('esc', 'ecp')]}),
         ('OG - Oggetto', {'fields': ['scan', 'dscd']}),
         ('LC - Localizzazione geografico-amministrativa', {'fields': [('pvcs', 'pvcr'), ('pvcp', 'pvcc')]}),
         ('DT - Cronologia', {'fields': ['dtzg', 'dtm']}),
