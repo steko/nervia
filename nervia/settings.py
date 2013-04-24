@@ -1,7 +1,6 @@
 # Django settings for nervia project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+from local_settings import *
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -78,9 +77,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
-
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '^!jvgsa0^hk!+m1pq&se+edl$(y5e&3+xiv1hzlj&88#rpuu07'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
