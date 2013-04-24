@@ -34,11 +34,14 @@ class CassaAdmin(admin.ModelAdmin):
                      'contenuto', 'materiale']}),
         ('CD - Codici', {'fields': [('lir'), ('nctr', 'nctn'), ('esc', 'ecp')]}),
         ('OG - Oggetto', {'fields': ['scan', 'dscd']}),
-        ('LC - Localizzazione geografico-amministrativa', {'fields': [('pvcs', 'pvcr'), ('pvcp', 'pvcc')]}),
+        ('LC - Localizzazione geografico-amministrativa', {'fields': [('pvcs', 'pvcr'), ('pvcp', 'pvcc')],
+                                                           'classes': ['collapse grp-collapse grp-closed']}),
         ('DT - Cronologia', {'fields': ['dtzg', 'dtm']}),
         ('MA - Materiale', {'fields': [('macc', 'macq')]}),
-        ('TU - Condizione giuridica e vincoli', {'fields': ['cdgg']}),
-        ('AD - Accesso ai dati', {'fields': [('adsp', 'adsm')]}),
+        ('TU - Condizione giuridica e vincoli', {'fields': ['cdgg'],
+                                                 'classes': ['collapse grp-collapse grp-closed']}),
+        ('AD - Accesso ai dati', {'fields': [('adsp', 'adsm')],
+                                  'classes': ['collapse grp-collapse grp-closed']}),
         ('CM - Compilazione', {'fields': [('cmpd', 'cmpn'), 'fur']})
         ]
 
