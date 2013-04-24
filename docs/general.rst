@@ -195,6 +195,15 @@ previsto il campo `MTC` (materia e tecnica) che invece fa parte della
 scheda RA (reperto archeologico) e ha una connotazione più di
 dettaglio.
 
+MADI
+~~~~
+
+Il campo `MA:MAD:MADI` contiene i numeri di inventario dei pezzi
+indicati e deve usare questa sintassi:
+
+- numeri singoli separati da barre es. 121/124/128
+- intervalli di numeri separati da trattino es. 123-126
+
 ISR
 ~~~
 
