@@ -73,7 +73,7 @@ class Cassa(models.Model):
 
     # informazioni di base
     number = models.CharField('Numero di cassa', max_length=50)
-    scavo = models.ForeignKey(Scavo, blank=True)
+    scavo = models.ForeignKey(Scavo)
     numscavo = models.IntegerField(
         'Numero di cassa dello scavo',
         blank=True,
