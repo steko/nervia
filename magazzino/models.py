@@ -135,7 +135,8 @@ class Cassa(models.Model):
                             help_text='Numero catalogo generale',
                             max_length=8,
                             unique=True,
-                            validators=[RegexValidator('[0-9]'*8)])
+                            validators=[RegexValidator('[0-9]'*8)],
+                            default='00000000')
     esc = models.CharField('ESC',
                            help_text='Ente schedatore',
                            max_length=25,
@@ -146,13 +147,23 @@ class Cassa(models.Model):
                            default='S19')
 
     # OG - Oggetto
-    ## OGT - Oggetto = Cassa
+    ## OGT - Oggetto
+    ### OGTD = materiale proveniente da Unità Stratigrafica
+    ### OGTM - Definizione materiale componente = ceramica/vetro...
+
+    # RE - Modalità di reperimento
+    ## DSC - Dati di scavo
     scan = models.CharField('SCAN',
                             help_text='Denominazione dello scavo',
                             max_length=100)
     dscd = models.CharField('DSCD',
-                            help_text='Data in cui è stato effettuato l’intervento di scavo archeologico',
-                            max_length=50)
+                            help_text='Data in cui è stato effettuato l’intervento di scavo archeologico, nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.',
+                            max_length=50,
+                            validators=[RegexValidator('[0-9][0-9][0-9][0-9]/[0-1][0-9]/[0-3][0-9]')])
+    # dsch = models.CharField('DSCH',
+    #                         help_text='Sigla per citazione',
+    #                         max_length=8,
+    #                         blank=True)
 
     # LC - Localizzazione geografico-amministrativa
     ## PVC LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE
@@ -178,13 +189,32 @@ class Cassa(models.Model):
     dtzg = models.CharField('DTZG',
                             help_text='Fascia cronologica di riferimento',
                             max_length=50)
+
+    DTM_CHOICES = ((c, c) for c in
+        (
+            'analisi dei materiali',
+            'analisi chimico-fisica',
+            'analisi stilistica',
+            'bibliografia',
+            'bollo',
+            'contesto',
+            'data',
+            'dati epigrafici',
+            'documentazione',
+            'tradizione orale',
+            'NR (recupero pregresso)'
+            ))
+
     dtm = models.CharField('DTM',
                            help_text='Motivazione cronologia',
-                           max_length=250)
+                           max_length=250,
+                           choices=DTM_CHOICES)
 
     # MA MATERIALE
     ## MAC MATERIALE COMPONENTE 
-    macc = models.CharField('MACC', help_text='Categoria', max_length=100)
+    macc = models.CharField('MACC',
+                            help_text='Categoria: es. ceramica oppure ceramica/vetro/metallo',
+                            max_length=100)
     macq = models.CharField('MACQ', help_text='Quantità', max_length=100)
 
     # TU CONDIZIONE GIURIDICA E VINCOLI 
