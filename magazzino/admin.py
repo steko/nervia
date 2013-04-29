@@ -30,19 +30,25 @@ class MaterialeInline(admin.StackedInline):
 class CassaAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Informazioni di base',
-         {'fields': ['number', 'scavo', 'numscavo', ('vano', 'posizione'),
-                     'contenuto', 'materiale']}),
-        ('CD - Codici', {'fields': [('lir'), ('nctr', 'nctn'), ('esc', 'ecp')]}),
-        ('OG - Oggetto', {'fields': ['scan', 'dscd']}),
-        ('LC - Localizzazione geografico-amministrativa', {'fields': [('pvcs', 'pvcr'), ('pvcp', 'pvcc')],
-                                                           'classes': ['collapse grp-collapse grp-closed']}),
+         {'fields': ['number', 'scavo', 'numscavo', ('vano', 'posizione')]}),
+        ('LDC - Collocazione specifica', {'fields': ['ldct', 'ldcn', 'ldcs']}),
+        ('DSC - Dati di scavo',
+         {'fields': ['scan', 'dscd']}),
         ('DT - Cronologia', {'fields': ['dtzg', 'dtm']}),
         ('MA - Materiale', {'fields': [('macc', 'macq')]}),
-        ('TU - Condizione giuridica e vincoli', {'fields': ['cdgg'],
-                                                 'classes': ['collapse grp-collapse grp-closed']}),
-        ('AD - Accesso ai dati', {'fields': [('adsp', 'adsm')],
-                                  'classes': ['collapse grp-collapse grp-closed']}),
-        ('CM - Compilazione', {'fields': [('cmpd', 'cmpn'), 'fur']})
+        ('CM - Compilazione', {'fields': [('cmpd', 'cmpn'), 'fur']}),
+        # collapsed fieldsets - these have default values
+        ('CD - Codici', {'fields': [('lir'), ('nctr', 'nctn'), ('esc', 'ecp')],
+                         'classes': ['collapse grp-collapse grp-closed']}),
+        ('LC - Localizzazione geografico-amministrativa',
+         {'fields': [('pvcs', 'pvcr'), ('pvcp', 'pvcc')],
+          'classes': ['collapse grp-collapse grp-closed']}),
+        ('TU - Condizione giuridica e vincoli',
+         {'fields': ['cdgg'],
+          'classes': ['collapse grp-collapse grp-closed']}),
+        ('AD - Accesso ai dati',
+         {'fields': [('adsp', 'adsm')],
+          'classes': ['collapse grp-collapse grp-closed']}),
         ]
 
     inlines = [MaterialeInline]
