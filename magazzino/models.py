@@ -336,38 +336,41 @@ class MaterialeInCassa(models.Model):
     '''Singoli materiali in una cassa.'''
 
     cassa = models.ForeignKey(Cassa)
-    classe = models.ForeignKey(ClasseDiMateriale, verbose_name='CLS - Classe')
-    isr = models.CharField('ISR - Iscrizioni', max_length=100, blank=True)
-    ogtd = models.ForeignKey(FormaDiMateriale,  verbose_name='OGTD - Forma')
-    ogtt = models.CharField('OGTT - Tipologia',
+    contesto = models.ForeignKey(ContestoScavo)
+    macl = models.ForeignKey(ClasseDiMateriale, verbose_name='MACL - Classe')
+    macd = models.ForeignKey(FormaDiMateriale,  verbose_name='MACD - Forma')
+    macp = models.CharField('MACP- Tipologia',
                             max_length=200,
                             help_text='Tipologia, es “Lamboglia 9” o “Dressel 23”',
                             blank=True)
+
+    macn_isr = models.CharField('ISR - Iscrizioni', max_length=100, blank=True)
+    macn = models.CharField('MACN - Annotazioni', max_length=100, blank=True)
 
     # conteggi
 
     help_text_inv = '''Numeri singoli separati da barre es. 123/124/125
 oppure intervalli di numeri separati da trattino es. 123-126'''
 
-    orli = models.IntegerField()
+    orli = models.IntegerField(default=0)
     numeri_inventario_orli = models.CharField(max_length=500,
                                               help_text=help_text_inv)
 
-    anse = models.IntegerField()
+    anse = models.IntegerField(default=0)
     numeri_inventario_anse = models.CharField(max_length=500,
                                               help_text=help_text_inv)
 
-    fondi = models.IntegerField()
+    fondi = models.IntegerField(default=0)
     numeri_inventario_fondi = models.CharField(max_length=500,
                                                help_text=help_text_inv)
 
-    piedi = models.IntegerField()
+    piedi = models.IntegerField(default=0)
     numeri_inventario_piedi = models.CharField(max_length=500,
                                                help_text=help_text_inv)
 
-    pareti = models.IntegerField()
+    pareti = models.IntegerField(default=0)
     numeri_inventario_pareti = models.CharField(max_length=500,
-                                                 help_text=help_text_inv)
+                                                help_text=help_text_inv)
 
     nme = models.IntegerField('NME', help_text='Numero minimo di esemplari')
 
