@@ -9,15 +9,26 @@ from django.core.validators import RegexValidator
 class Scavo(models.Model):
     '''Scavo archeologico.
 
-    Probabilmente da ricondurre a una scheda ICCD SAS.'''
+    Corrisponde al campo DSC e alla relativa scheda di authority
+    file.'''
 
-    nome = models.CharField(max_length=50)
-    sigla = models.CharField(max_length=50, blank=True)
+    scan = models.CharField('SCAN',
+                            help_text='''
+Denominazione dello scavo. Es.“Albintimilium, teatro, parodos est”.
+Seguire sempre l'ordine dal generale al particolare.''',
+                            max_length=100,
+                            unique=True)
+    scad = models.TextField('SCAD',
+                            help_text='Descrizione')
     luogo = models.CharField('Località', max_length=100)
-    descrizione = models.TextField()
+
+    dsch = models.CharField('DSCH',
+                            help_text='Sigla identificativa. Es. “VGF”, “XXSP”',
+                            max_length=8,
+                            blank=True)
 
     def __unicode__(self):
-        return self.nome
+        return self.scan
 
     class Meta:
         verbose_name_plural = "scavi"
@@ -27,16 +38,18 @@ class ContestoScavo(models.Model):
     '''Unità stratigrafica, strato, livello o altro.
 
     Un qualunque tipo di indicazione sulla provenienza del materiale
-    di scavo, in forma sintetica'''
+    di scavo, in forma sintetica.'''
 
-    number = models.CharField(max_length=50)
+    numero_nome = models.CharField('Numero o nome',
+                                   help_text='Es. “US 551”, “Strato II, parodos est, 3° taglio”.',
+                                   max_length=50)
     scavo = models.ForeignKey(Scavo)
 
     def __unicode__(self):
-        return "%s - %s" % (self.number, self.scavo)
+        return "%s - %s" % (self.scavo, self.numero_nome)
 
     class Meta:
-        verbose_name_plural = "contesti"
+        verbose_name_plural = "contesti di scavo"
 
 
 class Magazzino(models.Model):
