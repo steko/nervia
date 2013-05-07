@@ -372,10 +372,12 @@ oppure intervalli di numeri separati da trattino es. 123-126'''
     numeri_inventario_pareti = models.CharField(max_length=500,
                                                 help_text=help_text_inv)
 
-    nme = models.IntegerField('NME', help_text='Numero minimo di esemplari')
+    nme = models.IntegerField('NME',
+                              help_text='Numero minimo di esemplari',
+                              default=1)
 
     def __unicode__(self):
-        return u'%s in %s' % (self.classe, self.cassa)
+        return u'%s in %s da %s in %s' % (self.macd, self.macl, self.contesto, self.cassa)
 
     class Meta:
         verbose_name_plural = "materiali in cassa"
