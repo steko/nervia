@@ -12,16 +12,27 @@ class Scavo(models.Model):
     Corrisponde al campo DSC e alla relativa scheda di authority
     file.'''
 
+    AREA_CHOICES = (
+        ('TEATR', 'Teatro'),
+        ('TERME', 'Terme'),
+        ('GAS', 'Gas'),
+        ('CAVAL', 'Cavalcavia'),
+        ('NECRO', 'Necropoli'),
+        ('VALTA', 'Ventimiglia alta'),
+        ('EXTRA', 'Scavi extraurbani'),
+        )
+
+    area = models.CharField(max_length=5, choices=AREA_CHOICES)
+    settore = models.CharField(max_length=50)
     scan = models.CharField('SCAN',
                             help_text='''
 Denominazione dello scavo. Es.“Albintimilium, teatro, parodos est”.
 Seguire sempre l'ordine dal generale al particolare.''',
-                            max_length=100,
+                            max_length=45,
                             unique=True)
     scad = models.TextField('SCAD',
                             help_text='Descrizione')
     luogo = models.CharField('Località', max_length=100)
-
     dsch = models.CharField('DSCH',
                             help_text='Sigla identificativa. Es. “VGF”, “XXSP”',
                             max_length=8,
@@ -40,10 +51,10 @@ class ContestoScavo(models.Model):
     Un qualunque tipo di indicazione sulla provenienza del materiale
     di scavo, in forma sintetica.'''
 
+    scavo = models.ForeignKey(Scavo)
     numero_nome = models.CharField('Numero o nome',
                                    help_text='Es. “US 551”, “Strato II, parodos est, 3° taglio”.',
                                    max_length=50)
-    scavo = models.ForeignKey(Scavo)
 
     def __unicode__(self):
         return "%s - %s" % (self.scavo, self.numero_nome)
@@ -86,7 +97,6 @@ class Cassa(models.Model):
 
     # informazioni di base
     number = models.CharField('Numero di cassa', max_length=50)
-    scavo = models.ForeignKey(Scavo)
     numscavo = models.IntegerField(
         'Numero di cassa dello scavo',
         blank=True,
@@ -166,17 +176,12 @@ class Cassa(models.Model):
 
     # RE - Modalità di reperimento
     ## DSC - Dati di scavo
-    scan = models.CharField('SCAN',
-                            help_text='Denominazione dello scavo',
-                            max_length=100)
     dscd = models.CharField('DSCD',
-                            help_text='Data in cui è stato effettuato l’intervento di scavo archeologico, nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.',
+                            help_text='''
+Data in cui è stato effettuato l’intervento di scavo archeologico,
+nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''',
                             max_length=50,
                             validators=[RegexValidator('[0-9][0-9][0-9][0-9]/[0-1][0-9]/[0-3][0-9]')])
-    # dsch = models.CharField('DSCH',
-    #                         help_text='Sigla per citazione',
-    #                         max_length=8,
-    #                         blank=True)
 
     # LC - Localizzazione geografico-amministrativa
     ## PVC LOCALIZZAZIONE GEOGRAFICO-AMMINISTRATIVA ATTUALE
