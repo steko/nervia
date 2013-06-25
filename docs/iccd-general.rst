@@ -6,16 +6,18 @@ Si possono adottare due approcci opposti alla creazione di un database
 che debba essere compatibile con le specifiche ICCD:
 
 1. corrispondenza molto stretta con le specifiche, cercando di
-   replicare in dettaglio tutti i campi, le obbligatorietà e così via
+   replicare in dettaglio tutti i campi, le obbligatorietà, i campi
+   ripetitivi e così via
 2. creare un modello ad hoc, tipicamente semplificato rispetto
-   all'originale in particolare per la ripetitività di molti campi, e
-   demandare la creazione di un tracciato conforme alle specifiche ad
-   una operazione di esportazione
+   all'originale in particolare per la ripetitività dei contenuti di
+   molti campi, e demandare la creazione di un tracciato conforme alle
+   specifiche ad una operazione di esportazione
 
 Apparentemente l'approccio 1 è quello più usato, anche nel caso di
 sviluppi più recenti come le versioni XML dei tracciati (ArtIn di
 Liberologico). È perfettamente legittimo. Però questo significa che
-non ci sono strumenti di conversione.
+non ci sono strumenti di conversione e alimenta un sistema in cui i
+dati sono conformi ma non vengono fatti circolare.
 
 Tabella materiali (TMA)
 =======================
@@ -130,25 +132,6 @@ Quindi i primi tre campi vanno tenuti separati nel database ma uniti
 al momento dell'esportazione insieme all'indicazione della località di
 scavo, costituendo il campo `SCAN`.
 
-È possibile indicare queste informazioni forse anche con il campo `LA`
-(altre localizzazioni geografico-amministrative), es::
-
-  LA:
-  TCL:  luogo di reperimento
-  PRV:
-  PRVR: Liguria
-  PRVP: IM
-  PRVC: Ventimiglia
-  PRVL: Nervia
-  PRC:
-  PRCT: teatro
-  PRCD: Teatro romano di Albintimilium
-  PRCS: parascaenium
-
-Ma non sembra una soluzione molto soddisfacente. In effetti il
-problema è causato dalla necessità di combinare informazioni che sono
-concepite per essere separate.
-
 Campi specifici
 ---------------
 
@@ -187,9 +170,11 @@ MACC
 ~~~~
 
 Il campo `MA:MAC:MACC` deve usare lo stesso vocabolario del campo
-`OG:OGT:OGTM`. La differenza tra i due è che `OGTM` è un campo al
-livello dell'intera scheda e quindi descrive il contenuto di una US o
-di una cassa, mentre `MACC` è riferito al gruppo di oggetti specifico
+`OG:OGT:OGTM` (ceramica, vetro, bronzo, etc.).
+
+La differenza tra i due campi è che `OGTM` è un campo al livello
+dell'intera scheda e quindi descrive il contenuto di una US o di una
+cassa, mentre `MACC` è riferito al gruppo di oggetti specifico
 (es. frammenti di una coppa Dragendorff 27). Nella scheda TMA non è
 previsto il campo `MTC` (materia e tecnica) che invece fa parte della
 scheda RA (reperto archeologico) e ha una connotazione più di

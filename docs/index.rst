@@ -14,14 +14,15 @@ Database:
    import
    migrations
    reset
+   sparse
 
 Standard ICCD:
 
 .. toctree::
    :maxdepth: 2
 
-   general
-   iccd
+   iccd-general
+   iccd-trasferimento
 
 Indices and tables
 ==================
