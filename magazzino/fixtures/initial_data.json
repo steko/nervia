@@ -1,0 +1,2388 @@
+[
+{
+    "pk": 1, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Bacile", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 2, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Balsamario", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 3, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Bicchiere", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 4, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Bottiglia", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 5, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Brocca", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 6, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Casseruola patina cinerognola", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 7, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Catino", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 8, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coperchio", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 9, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coppa", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 10, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coppa-bacile", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 11, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Forma non determinata", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 12, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Lavezzo", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 13, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Lucerna", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 14, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Mortaio", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 15, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Olla", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 16, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Olpe", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 17, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Patera", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 18, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Pentola", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 19, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Peso", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 20, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Piatto", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 21, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Piatto-coperchio orlo annerito", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 22, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Tegame", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 23, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Altro", 
+        "famiglia": "Vasellame"
+    }
+},
+{
+    "pk": 24, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Antefissa", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 25, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Cocciopesto", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 26, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Concotto", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 27, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coppo", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 28, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Elemento architettonico", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 29, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Elemento di colonna", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 30, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Lastra", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 31, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Mattone", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 32, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Mosaico", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 33, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Rilievo", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 34, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Statuaria", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 35, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Suspensura", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 36, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Tegola", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 37, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Tessere musive", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 38, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Tubulo", 
+        "famiglia": "Materiale da costruzione"
+    }
+},
+{
+    "pk": 39, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Ago in bronzo", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 40, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Amo", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 41, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Anello", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 42, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Borchia", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 43, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Bottone", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 44, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Campanello", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 45, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Chiodo", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 46, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Colino", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 47, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coltello", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 48, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Contenitore", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 49, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Coperchio", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 50, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Elemento di catena", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 51, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Fibula", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 52, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Fistula", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 53, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Lancia", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 54, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Medaglia", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 55, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Orecchino", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 56, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Pendente", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 57, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Peso", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 58, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Rilievo", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 59, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Specchio", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 60, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Stadera", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 61, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Statua", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 62, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Utensile", 
+        "famiglia": "Manufatti metallici"
+    }
+},
+{
+    "pk": 63, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Ago crinale in osso", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 64, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Ago in osso", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 65, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Cucchiaio", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 66, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Dado", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 67, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Elemento decorativo", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 68, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Pedina gioco", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 69, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Spatola", 
+        "famiglia": "Manufatti in osso"
+    }
+},
+{
+    "pk": 70, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Ossa umane", 
+        "famiglia": "Reperti osteologici umani"
+    }
+},
+{
+    "pk": 71, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Denti umani", 
+        "famiglia": "Reperti osteologici umani"
+    }
+},
+{
+    "pk": 72, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Ossa animali", 
+        "famiglia": "Reperti faunistici"
+    }
+},
+{
+    "pk": 73, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Denti animali", 
+        "famiglia": "Reperti faunistici"
+    }
+},
+{
+    "pk": 74, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Malacofauna", 
+        "famiglia": "Reperti faunistici"
+    }
+},
+{
+    "pk": 75, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Carbone", 
+        "famiglia": "Campionature"
+    }
+},
+{
+    "pk": 76, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Sedimento", 
+        "famiglia": "Campionature"
+    }
+},
+{
+    "pk": 77, 
+    "model": "magazzino.formadimateriale", 
+    "fields": {
+        "forma": "Terreno", 
+        "famiglia": "Campionature"
+    }
+},
+{
+    "pk": 1, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore africane", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AAFR"
+    }
+},
+{
+    "pk": 2, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore betiche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ABET"
+    }
+},
+{
+    "pk": 3, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore betiche costiere", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ABETC"
+    }
+},
+{
+    "pk": 4, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore etrusche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AETR"
+    }
+},
+{
+    "pk": 5, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore galliche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AGAL"
+    }
+},
+{
+    "pk": 6, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore iberiche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AIBE"
+    }
+},
+{
+    "pk": 7, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore locali di imitazione", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ALOC"
+    }
+},
+{
+    "pk": 8, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore massaliote", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AMAS"
+    }
+},
+{
+    "pk": 9, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore neo-puniche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ANEO"
+    }
+},
+{
+    "pk": 10, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore non determinate", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ANON"
+    }
+},
+{
+    "pk": 11, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore orientali repubblicane", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AOR"
+    }
+},
+{
+    "pk": 12, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore orientali tarde", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "AORT"
+    }
+},
+{
+    "pk": 13, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore padano-adriatiche imperiali", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "APADI"
+    }
+},
+{
+    "pk": 14, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore padano-adriatiche repubblicane", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "APADR"
+    }
+},
+{
+    "pk": 15, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore tarraconensi", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ATAR"
+    }
+},
+{
+    "pk": 16, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Ceramica attica a figure rosse", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "ATFR"
+    }
+},
+{
+    "pk": 17, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore tirreniche", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "ATIR"
+    }
+},
+{
+    "pk": 18, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Campionature", 
+        "forme": [], 
+        "famiglia": "Campionature", 
+        "sigla": "CAMP"
+    }
+},
+{
+    "pk": 19, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione non deteterminata acroma", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "COMAC"
+    }
+},
+{
+    "pk": 20, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione africana", 
+        "forme": [], 
+        "famiglia": "Vasellame comune per preparazione", 
+        "sigla": "COMAFP"
+    }
+},
+{
+    "pk": 21, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Altre produzioni", 
+        "forme": [], 
+        "famiglia": "Vasellame comune per preparazione", 
+        "sigla": "COMALP"
+    }
+},
+{
+    "pk": 22, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione non determinata ingobbiata", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "COMIN"
+    }
+},
+{
+    "pk": 23, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate tardoantiche preparazione", 
+        "forme": [], 
+        "famiglia": "Vasellame comune per preparazione", 
+        "sigla": "COMINV"
+    }
+},
+{
+    "pk": 24, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione locale/circumlocale non tornita", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "COMLO"
+    }
+},
+{
+    "pk": 25, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Comune tirrenica", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "COMTI"
+    }
+},
+{
+    "pk": 26, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione tirrenica", 
+        "forme": [], 
+        "famiglia": "Vasellame comune per preparazione", 
+        "sigla": "COMTIP"
+    }
+},
+{
+    "pk": 27, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione non determinata a vetrina sparsa", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "COMVE"
+    }
+},
+{
+    "pk": 28, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Coroplastica", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "CORO"
+    }
+},
+{
+    "pk": 29, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Dolia altre produzioni", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "DOLA"
+    }
+},
+{
+    "pk": 30, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Dolia tirrenici", 
+        "forme": [], 
+        "famiglia": "Contenitori da trasporto", 
+        "sigla": "DOLT"
+    }
+},
+{
+    "pk": 31, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Deriv\u00e9es des Sigill\u00e9es Pal\u00e9ochr\u00e9tiennes", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "DSP"
+    }
+},
+{
+    "pk": 32, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Engob\u00e9e", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "ENG"
+    }
+},
+{
+    "pk": 33, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Engobe\u00e9 tarda", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "ENGT"
+    }
+},
+{
+    "pk": 34, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Epigrafi in marmo", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "EPIM"
+    }
+},
+{
+    "pk": 35, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Epigrafi in pietra", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "EPIP"
+    }
+},
+{
+    "pk": 36, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Fusaiola pietra", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "FUSP"
+    }
+},
+{
+    "pk": 37, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Fusaiola terracotta", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "FUST"
+    }
+},
+{
+    "pk": 38, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Grigia catalana", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "GRCAT"
+    }
+},
+{
+    "pk": 39, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Grigia imperiale", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "GRI"
+    }
+},
+{
+    "pk": 40, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Intonaci", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "INTO"
+    }
+},
+{
+    "pk": 41, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Intonaci dipinti", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "INTOD"
+    }
+},
+{
+    "pk": 42, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriata imperiale", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "INV"
+    }
+},
+{
+    "pk": 43, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate tardo-antiche mensa", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "INVTA"
+    }
+},
+{
+    "pk": 44, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Contenitori lapidei", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "LAP"
+    }
+},
+{
+    "pk": 45, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata lucente", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "LUC"
+    }
+},
+{
+    "pk": 46, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne \u2013 altre", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCAL"
+    }
+},
+{
+    "pk": 47, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne becco tondo", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCBT"
+    }
+},
+{
+    "pk": 48, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne Firma", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCFIR"
+    }
+},
+{
+    "pk": 49, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne granul.", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCGR"
+    }
+},
+{
+    "pk": 50, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne sigillata africana", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCSCH"
+    }
+},
+{
+    "pk": 51, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne tardo-repubblicane", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCTR"
+    }
+},
+{
+    "pk": 52, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Lucerne volute", 
+        "forme": [], 
+        "famiglia": "Lucerne", 
+        "sigla": "LUCVOL"
+    }
+},
+{
+    "pk": 53, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Macine in pietra", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MAC"
+    }
+},
+{
+    "pk": 54, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Macinelli", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MACI"
+    }
+},
+{
+    "pk": 55, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Malta", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MAL"
+    }
+},
+{
+    "pk": 56, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Manufatti metallici", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MANME"
+    }
+},
+{
+    "pk": 57, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Manufatti in osso", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MANOS"
+    }
+},
+{
+    "pk": 58, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Materiale da costruzione", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MATCO"
+    }
+},
+{
+    "pk": 59, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Megarese", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "MEGA"
+    }
+},
+{
+    "pk": 60, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monete", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "MON"
+    }
+},
+{
+    "pk": 61, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Reperti faunistici", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "OSA"
+    }
+},
+{
+    "pk": 62, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Reperti osteologici umani", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "OSU"
+    }
+},
+{
+    "pk": 63, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pate claire romana", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "PATCL"
+    }
+},
+{
+    "pk": 64, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pate claire", 
+        "forme": [], 
+        "famiglia": "Vasellame comune per preparazione", 
+        "sigla": "PATCLP"
+    }
+},
+{
+    "pk": 65, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pate claire preromana acroma", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "PATPRA"
+    }
+},
+{
+    "pk": 66, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pate claire preromana verniciata", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "PATPRV"
+    }
+},
+{
+    "pk": 67, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Peso in pietra", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "PESP"
+    }
+},
+{
+    "pk": 68, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pesi da telaio", 
+        "forme": [], 
+        "famiglia": "Altro materiale", 
+        "sigla": "PEST"
+    }
+},
+{
+    "pk": 69, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pietra ollare", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "PIOL"
+    }
+},
+{
+    "pk": 70, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Presigillata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PRESI"
+    }
+},
+{
+    "pk": 71, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili acroma liscia", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSACL"
+    }
+},
+{
+    "pk": 72, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili altre", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSAL"
+    }
+},
+{
+    "pk": 73, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili acroma rotellata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSAR"
+    }
+},
+{
+    "pk": 74, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili barbotine", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSBAR"
+    }
+},
+{
+    "pk": 75, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili pseudo-sabbiata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSPSA"
+    }
+},
+{
+    "pk": 76, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili rotellata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSROT"
+    }
+},
+{
+    "pk": 77, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili sabbiata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSSAB"
+    }
+},
+{
+    "pk": 78, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pareti sottili verniciata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "PSVER"
+    }
+},
+{
+    "pk": 79, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata chiara A", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SCHA"
+    }
+},
+{
+    "pk": 80, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata chiara B", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SCHB"
+    }
+},
+{
+    "pk": 81, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata chiara C", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SCHC"
+    }
+},
+{
+    "pk": 82, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata chiara D", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SCHD"
+    }
+},
+{
+    "pk": 83, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sombreros de Copa", 
+        "forme": [], 
+        "famiglia": "Vasellame comune da mensa e conserva", 
+        "sigla": "SOMBR"
+    }
+},
+{
+    "pk": 84, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata orientale", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SOR"
+    }
+},
+{
+    "pk": 85, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata sud-gallica barbotina", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SSGBA"
+    }
+},
+{
+    "pk": 86, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata sud-gallica decorata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SSGDE"
+    }
+},
+{
+    "pk": 87, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata sud-gallica liscia", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SSGL"
+    }
+},
+{
+    "pk": 88, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata sud-gallica marm liscia", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SSGMA"
+    }
+},
+{
+    "pk": 89, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata sud-gallica marm decorata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "SSGMAD"
+    }
+},
+{
+    "pk": 90, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata italica decorata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "TSIDE"
+    }
+},
+{
+    "pk": 91, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata italica liscia", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "TSILI"
+    }
+},
+{
+    "pk": 92, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata nord-italica", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "TSNOR"
+    }
+},
+{
+    "pk": 93, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Sigillata tardo-italica decorata", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "TSTIDE"
+    }
+},
+{
+    "pk": 94, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vetro imperiale", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VETIM"
+    }
+},
+{
+    "pk": 95, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vetro tardo-antico", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VETTA"
+    }
+},
+{
+    "pk": 96, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Altro", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFAL"
+    }
+},
+{
+    "pk": 97, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione africana - A str", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFAS"
+    }
+},
+{
+    "pk": 98, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione \u201cligure\u201d", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFLIG"
+    }
+},
+{
+    "pk": 99, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione locale/circumlocale non tornita", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFLOC"
+    }
+},
+{
+    "pk": 100, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione locale/circumlocale tornita", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFLOCT"
+    }
+},
+{
+    "pk": 101, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Micac\u00e9e Varoise", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFMIC"
+    }
+},
+{
+    "pk": 102, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione africana - Orlo annerito", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFOA"
+    }
+},
+{
+    "pk": 103, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione africana \u2013 Patina cinerognola", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFPC"
+    }
+},
+{
+    "pk": 104, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Produzione tirrenica", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VFTIR"
+    }
+},
+{
+    "pk": 105, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera campana A", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNA"
+    }
+},
+{
+    "pk": 106, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera romana \u2013 altre", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNAL"
+    }
+},
+{
+    "pk": 107, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera attica", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNAT"
+    }
+},
+{
+    "pk": 108, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera campana B", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNB"
+    }
+},
+{
+    "pk": 109, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera campana B-oide", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNBO"
+    }
+},
+{
+    "pk": 110, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera campana C", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNC"
+    }
+},
+{
+    "pk": 111, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera campana pasta grigia", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNGR"
+    }
+},
+{
+    "pk": 112, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera massaliota", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNMA"
+    }
+},
+{
+    "pk": 113, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera nord-etrusca/volterrana", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNNE"
+    }
+},
+{
+    "pk": 114, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera Petites Estampilles", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNPE"
+    }
+},
+{
+    "pk": 115, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice nera preromana \u2013 altre", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VNPRE"
+    }
+},
+{
+    "pk": 116, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vernice rossa tarda", 
+        "forme": [], 
+        "famiglia": "Vasellame da mensa", 
+        "sigla": "VRTA"
+    }
+},
+{
+    "pk": 117, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Pantellerian Ware", 
+        "forme": [], 
+        "famiglia": "Vasellame da fuoco", 
+        "sigla": "VSPW"
+    }
+},
+{
+    "pk": 118, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Coppi", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED1"
+    }
+},
+{
+    "pk": 119, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Laggioni a cuenca", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED2"
+    }
+},
+{
+    "pk": 120, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Laggioni a cuerda seca", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED3"
+    }
+},
+{
+    "pk": 121, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Laggioni smaltati e dipinti", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED4"
+    }
+},
+{
+    "pk": 122, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Mattonelle medievali invetriate monocrome", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED5"
+    }
+},
+{
+    "pk": 123, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Mattonelle medievali smaltate e decorate a lustro/blu", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED6"
+    }
+},
+{
+    "pk": 124, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Mattonelle medievali smaltate monocrome", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED7"
+    }
+},
+{
+    "pk": 125, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Mattoni", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED8"
+    }
+},
+{
+    "pk": 126, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Tegole", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED9"
+    }
+},
+{
+    "pk": 127, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Tubature", 
+        "forme": [], 
+        "famiglia": "Fittili per edilizia", 
+        "sigla": "MED10"
+    }
+},
+{
+    "pk": 128, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Anfore medievali", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Contenitori da trasporto", 
+        "sigla": "MED11"
+    }
+},
+{
+    "pk": 129, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Giare islamiche", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Contenitori da trasporto", 
+        "sigla": "MED12"
+    }
+},
+{
+    "pk": 130, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Arcaica tirrenica", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED13"
+    }
+},
+{
+    "pk": 131, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma a fondo ribassato", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED14"
+    }
+},
+{
+    "pk": 132, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma a girandola", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED15"
+    }
+},
+{
+    "pk": 133, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma a punta", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED16"
+    }
+},
+{
+    "pk": 134, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma a stecca", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED17"
+    }
+},
+{
+    "pk": 135, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma conventuale", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED18"
+    }
+},
+{
+    "pk": 136, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Policroma", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED19"
+    }
+},
+{
+    "pk": 137, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Zeuxippus Ware", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Graffite", 
+        "sigla": "MED20"
+    }
+},
+{
+    "pk": 138, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Bianca", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED21"
+    }
+},
+{
+    "pk": 139, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Chiara iniziale", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED22"
+    }
+},
+{
+    "pk": 140, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Chiara ligure", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED23"
+    }
+},
+{
+    "pk": 141, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED24"
+    }
+},
+{
+    "pk": 142, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Monocroma verde", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED25"
+    }
+},
+{
+    "pk": 143, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Policroma", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED26"
+    }
+},
+{
+    "pk": 144, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Slip ware", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Ingobbiate", 
+        "sigla": "MED27"
+    }
+},
+{
+    "pk": 145, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate d'uso comune", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED28"
+    }
+},
+{
+    "pk": 146, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate da fuoco", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED29"
+    }
+},
+{
+    "pk": 147, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate di importazione con decorazione dipinta", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED30"
+    }
+},
+{
+    "pk": 148, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate di importazione con decorazione impressa a stampo", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED31"
+    }
+},
+{
+    "pk": 149, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate di importazione con vetrina a due colori", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED32"
+    }
+},
+{
+    "pk": 150, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate di importazione tipo spiral ware", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED33"
+    }
+},
+{
+    "pk": 151, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Invetriate monocrome verdi", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED34"
+    }
+},
+{
+    "pk": 152, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vetrina Pesante", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED35"
+    }
+},
+{
+    "pk": 153, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Vetrina Pesante forum ware ", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Invetriate", 
+        "sigla": "MED36"
+    }
+},
+{
+    "pk": 154, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Depurate", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED37"
+    }
+},
+{
+    "pk": 155, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Depurate a bande sovradipinte in rosso", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED38"
+    }
+},
+{
+    "pk": 156, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Depurate decorate a stampiglia", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED39"
+    }
+},
+{
+    "pk": 157, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Non depurate - a caolino", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED40"
+    }
+},
+{
+    "pk": 158, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Non depurate - a gabbri", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED41"
+    }
+},
+{
+    "pk": 159, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Non depurate - altro", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED42"
+    }
+},
+{
+    "pk": 160, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Non depurate - vacuolari", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Prive di rivestimento", 
+        "sigla": "MED43"
+    }
+},
+{
+    "pk": 161, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Maiolica ligure", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED44"
+    }
+},
+{
+    "pk": 162, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Maioliche arcaiche", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED45"
+    }
+},
+{
+    "pk": 163, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Maioliche centroitaliche", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED46"
+    }
+},
+{
+    "pk": 164, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Protomaioliche", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED47"
+    }
+},
+{
+    "pk": 165, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate di importazione decorata a cobalto e manganese", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED48"
+    }
+},
+{
+    "pk": 166, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate di importazione decorata a lustro metallico", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED49"
+    }
+},
+{
+    "pk": 167, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate di importazione policrome a doppio bagno", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED50"
+    }
+},
+{
+    "pk": 168, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate di importazione verde con decorazione a boli in giallo", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED51"
+    }
+},
+{
+    "pk": 169, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate di importazione verde dipinta in bruno", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED52"
+    }
+},
+{
+    "pk": 170, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate e invetriate monocrome di importazione ", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED53"
+    }
+},
+{
+    "pk": 171, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Smaltate e invetriate policrome di importazione", 
+        "forme": [], 
+        "famiglia": "Medievali \u2013 Smaltate", 
+        "sigla": "MED54"
+    }
+},
+{
+    "pk": 172, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Altri tipi", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED55"
+    }
+},
+{
+    "pk": 173, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Bianche", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED56"
+    }
+},
+{
+    "pk": 174, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Inglesi a decalcomania", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED57"
+    }
+},
+{
+    "pk": 175, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Marroni", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED58"
+    }
+},
+{
+    "pk": 176, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Nere", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED59"
+    }
+},
+{
+    "pk": 177, 
+    "model": "magazzino.classedimateriale", 
+    "fields": {
+        "classe": "Taches noires", 
+        "forme": [], 
+        "famiglia": "Terraglie", 
+        "sigla": "MED60"
+    }
+}
+]
