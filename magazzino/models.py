@@ -286,6 +286,9 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
         verbose_name_plural = "casse"
         unique_together = (('ldcn', 'number'),)
 
+class FormaManager(models.Manager):
+    def get_by_natural_key(self, famiglia, forma):
+        return self.get(famiglia=famiglia, forma=forma)
 
 
 class FormaDiMateriale(models.Model):
@@ -298,6 +301,11 @@ class FormaDiMateriale(models.Model):
                              help_text='Forma',
                              max_length=100)
 
+    objects = FormaManager()
+
+    def natural_key(self):
+        return (self.famiglia, self.forma)
+
     def __unicode__(self):
         return self.forma
 
@@ -308,36 +316,46 @@ class FormaDiMateriale(models.Model):
     class Meta:
         verbose_name_plural = 'forme di materiale'
         ordering = ['pk']
-        unique_together = ('famiglia', 'forma')
+        unique_together = (('famiglia', 'forma'),)
+
+
+class ClasseManager(models.Manager):
+    def get_by_natural_key(self, sigla):
+        return self.get(sigla=sigla)
 
 
 class ClasseDiMateriale(models.Model):
     '''Classi di materiale.
 
-    Corrisponde al campo CLS della scheda TMA.'''
+    Corrisponde al campo MACL della scheda TMA.'''
 
-    classe = models.CharField('CLS',
-                              help_text='Classe',
+    classe = models.CharField(help_text='Classe - MACL',
                               max_length=100)
-    sigla = models.CharField(max_length=12, help_text='Sigla della classe', unique=True)
+    sigla = models.CharField(max_length=12,
+                             help_text='Sigla della classe',
+                             unique=True)
     famiglia = models.CharField(max_length=50, blank=True)
     forme = models.ManyToManyField(FormaDiMateriale, blank=True)
 
+    objects = ClasseManager()
+
+    def natural_key(self):
+        return self.sigla
+
     def __unicode__(self):
-        cls_str = self.sigla
-        if self.famiglia:
-            cls_str += u'%s - ' % (self.famiglia)
-        cls_str += self.classe
-        return cls_str
+        return ' - '.join([self.sigla, self.famiglia, self.classe])
 
     @staticmethod
     def autocomplete_search_fields():
-        return ('id__iexact', 'classe__icontains', 'famiglia__icontains')
+        return ('id__iexact',
+                'sigla__icontains',
+                'classe__icontains',
+                'famiglia__icontains')
 
     class Meta:
         verbose_name_plural = "classi di materiale"
         ordering = ['pk']
-        unique_together = ('classe', 'famiglia')
+        unique_together = (('classe', 'famiglia'),)
 
 
 class MaterialeInCassa(models.Model):
