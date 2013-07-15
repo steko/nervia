@@ -8,22 +8,27 @@ for m in Scavo, Vano, FormaDiMateriale:
 
 class ClasseAdmin(admin.ModelAdmin):
     filter_horizontal = ['forme']
+    list_display = ('sigla', 'classe', 'famiglia')
+    list_filter = ['famiglia']
+    search_fields = ['classe']
 
 class MaterialeInline(admin.StackedInline):
     model = MaterialeInCassa
-    raw_id_fields = ('classe', 'ogtd')
+    raw_id_fields = ('macl', 'macd')
     autocomplete_lookup_fields = {
-        'fk': ['classe', 'ogtd'],
+        'fk': ['macl', 'macd'],
         }
     fieldsets = [
-        (None, {'fields' : ['classe', 'ogtd']}),
-        (None, {'fields' : ['ogtt', 'isr']}),
-        (None, {'fields' : [('orli', 'numeri_inventario_orli'),
-                            ('anse', 'numeri_inventario_anse'),
-                            ('pareti', 'numeri_inventario_pareti'),
-                            ('fondi', 'numeri_inventario_fondi'),
-                            ('piedi', 'numeri_inventario_piedi'),
-                            'nme']}),
+        (None, {'fields' : ['cassa', 'contesto']}),
+        (None, {'fields' : ['macl', 'macd']}),
+        (None, {'fields' : ['macp', 'macn_isr']}),
+        ('Quantificazione', {'fields' : [('orli', 'numeri_inventario_orli'),
+                                         ('anse', 'numeri_inventario_anse'),
+                                         ('pareti', 'numeri_inventario_pareti'),
+                                         ('fondi', 'numeri_inventario_fondi'),
+                                         ('piedi', 'numeri_inventario_piedi'),
+                                         'nme']}),
+        (None, {'fields' : ['macn']}),
         ]
     extra = 3
 
