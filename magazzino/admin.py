@@ -3,7 +3,7 @@
 from django.contrib import admin
 from magazzino.models import *
 
-for m in Scavo, Magazzino, Vano, ContestoScavo, FormaDiMateriale:
+for m in Scavo, Vano, FormaDiMateriale:
     admin.site.register(m)
 
 class ClasseAdmin(admin.ModelAdmin):
@@ -30,10 +30,10 @@ class MaterialeInline(admin.StackedInline):
 class CassaAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Informazioni di base',
-         {'fields': ['number', 'scavo', 'numscavo', ('vano', 'posizione')]}),
+         {'fields': ['number', 'numscavo']}),
         ('LDC - Collocazione specifica', {'fields': ['ldct', 'ldcn', 'ldcs']}),
         ('DSC - Dati di scavo',
-         {'fields': ['scan', 'dscd']}),
+         {'fields': ['dscd']}),
         ('DT - Cronologia', {'fields': ['dtzg', 'dtm']}),
         ('MA - Materiale', {'fields': [('macc', 'macq')]}),
         ('CM - Compilazione', {'fields': [('cmpd', 'cmpn'), 'fur']}),
@@ -53,5 +53,10 @@ class CassaAdmin(admin.ModelAdmin):
 
     inlines = [MaterialeInline]
 
+
+class ContestoAdmin(admin.ModelAdmin):
+    inlines = [MaterialeInline]
+
 admin.site.register(Cassa, CassaAdmin)
+admin.site.register(ContestoScavo, ContestoAdmin)
 admin.site.register(ClasseDiMateriale, ClasseAdmin)

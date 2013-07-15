@@ -63,31 +63,33 @@ class ContestoScavo(models.Model):
         verbose_name_plural = "contesti di scavo"
 
 
-class Magazzino(models.Model):
-    '''Un magazzino.'''
-
-    nome = models.CharField(max_length=50)
-    descrizione = models.TextField()
-
-    def __unicode__(self):
-        return self.nome
-
-    class Meta:
-        verbose_name_plural = "magazzini"
-
-
 class Vano(models.Model):
     '''Un vano all'interno di un magazzino.'''
 
-    number = models.IntegerField('Numero del vano')
-    magazzino = models.ForeignKey(Magazzino)
+    ENEL = 'ENEL'
+    GAS = 'GAS'
+    ANTIQUARIUM = 'ANTIQ'
+
+    MAGAZZINO_CHOICES = (
+        (ENEL, 'Magazzino ENEL'),
+        (GAS, 'Magazzino Gas'),
+        (ANTIQUARIUM, 'Magazzino Antiquarium'),
+        )
+
+    numero = models.IntegerField('Numero del vano')
+    magazzino = models.CharField(max_length=5, choices=MAGAZZINO_CHOICES)
     desc = models.TextField('Descrizione')
 
     def __unicode__(self):
-        return u'%s %s' % (self.magazzino.__str__(), self.number)
+        return u'%s - Vano %d' % (self.get_magazzino_display(), self.numero)
 
     class Meta:
         verbose_name_plural = 'vani'
+
+
+class CassaManager(models.Manager):
+    def get_by_natural_key(self, magazzino, numero):
+        return self.get(ldcn__magazzino=magazzino, number=numero)
 
 
 class Cassa(models.Model):
@@ -102,12 +104,6 @@ class Cassa(models.Model):
         blank=True,
         null=True,
         help_text='Il numero di cassa nella numerazione dello scavo, se presente')
-    vano = models.ForeignKey(Vano)
-    posizione = models.CharField(help_text='Scaffale, colonna o altro',
-                                 max_length=100)
-    contenuto = models.TextField(blank=True,
-                                 help_text='Descrizione estesa del contenuto')
-    materiale = models.CharField(max_length=100, blank=True)
 
     # CD - Codici
     tsk = models.CharField('TSK',
@@ -195,11 +191,11 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
                             help_text='Tipologia del contenitore',
                             max_length=25,
                             default='magazzino')
-    ldcn = models.CharField('LDCN',
-                            help_text='Denominazione magazzino',
-                            max_length=50)
+    ldcn = models.ForeignKey(Vano,
+                             verbose_name='LDCN',
+                             help_text='Magazzino e vano')
     ldcs = models.CharField('LDCS',
-                            help_text='Specifiche: vano, sala, corridoio, colonna',
+                            help_text='Specifiche: corridoio, colonna',
                             max_length=50)
 
     # DT CRONOLOGIA 
@@ -278,11 +274,18 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
     cmpn = models.CharField('CMPN', help_text='Nome', max_length=70)
     fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=70)
 
+    objects = CassaManager()
+
+    def natural_key(self):
+        return (self.vano.get_magazzino_display(), self.number)
+
     def __unicode__(self):
-        return self.number
+        return u'%s %s' % (self.ldcn.get_magazzino_display(), self.number)
 
     class Meta:
         verbose_name_plural = "casse"
+        unique_together = (('ldcn', 'number'),)
+
 
 
 class FormaDiMateriale(models.Model):
