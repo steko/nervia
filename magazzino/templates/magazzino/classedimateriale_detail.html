@@ -1,0 +1,25 @@
+{% extends "magazzino/classedimateriale_base.html" %}
+
+{% block content %}
+
+<h1>{{ cdm.sigla }} ‒ {{ cdm.classe }}</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cassa<th>Contesto<th>Forma<th>Tipologia<th>Numero frammenti
+        </tr>
+    </thead>
+    <tbody>
+    {% for mic in cdm.materialeincassa_set.all %}
+        <tr>
+            <td>{{ mic.cassa.number }}
+            <td>{{ mic.contesto }}
+            <td>{{ mic.macd }}
+            <td>{{ mic.macp }}
+            <td class="align-right">{{ mic.orli|add:mic.anse|add:mic.pareti|add:mic.fondi|add:mic.piedi }}
+            <td class="align-right"><a href="{% url 'magazzino:materialeincassa-detail' mic.pk %}">dettaglio</a>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

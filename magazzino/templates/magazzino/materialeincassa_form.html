@@ -1,0 +1,9 @@
+{% extends "magazzino/base_generic.html" %}
+
+{% block content %}
+<form action="{% url 'magazzino:materialeincassa_update' object.id %}" method="post" role="form">
+{% csrf_token %}
+{{ form }}
+<input type="submit" />
+</form>
+{% endblock %}

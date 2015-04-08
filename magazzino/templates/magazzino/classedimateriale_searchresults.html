@@ -1,0 +1,19 @@
+{% extends "magazzino/classedimateriale_base.html" %}
+
+{% block content %}
+
+<h1>Classi di materiale</h1>
+
+<p>Classi contenenti <i>{{ ss }}</i>.
+
+{% regroup cdm|dictsort:'famiglia' by famiglia as cdm_list %}
+
+{% for fam in cdm_list %}
+<h2>{{ fam.grouper }}</h2>
+<ul>
+{% for item in fam.list %}
+    <li><a href="{% url 'magazzino:classedimateriale_detail' item.sigla %}">{{ item.sigla }}</a> ‒ {{ item.classe }} <i>({{ item.materialeincassa_set.count }})</i>
+{% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}

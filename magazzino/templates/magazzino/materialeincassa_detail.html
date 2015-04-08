@@ -1,0 +1,43 @@
+{% extends "magazzino/base_generic.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-6">
+        <h1>Dettaglio materiale</h1>
+
+        <table class="table table-striped">
+            <tr><th>Contesto<td>{{ mic.contesto }}
+            <tr><th>Cassa<td>{{ mic.cassa }}
+            <tr><th>Classe<td><a href="{% url 'magazzino:classedimateriale_detail' mic.macl.sigla %}">{{ mic.macl }}</a>
+            <tr><th>Forma<td><a href="#">{{ mic.macd }}</a>
+            {% if mic.macp %}
+            <tr><th>Tipologia<td>{{ mic.macp }}
+            {% endif %}
+            {% if mic.macn %}
+            <tr><th>Osservazioni<td>{{ mic.macn }}
+            {% endif %}
+        </table>
+    </div>
+    <div class="col-md-6">
+        <h2>Numero frammenti</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>&nbsp;<th>Quantità<th>Numeri di inventario
+                </tr>
+            </thead>
+            <tbody>
+                {% if mic.orli %}<tr><th>Orli<td class="text-right">{{ mic.orli }}<td>{{ mic.numeri_inventario_orli }}{% endif %}
+                {% if mic.anse %}<tr><th>Anse<td class="text-right">{{ mic.anse }}<td>{{ mic.numeri_inventario_anse }}{% endif %}
+                {% if mic.pareti %}<tr><th>Pareti<td class="text-right">{{ mic.pareti }}<td>{{ mic.numeri_inventario_pareti }}{% endif %}
+                {% if mic.fondi %}<tr><th>Fondi<td class="text-right">{{ mic.fondi }}<td>{{ mic.numeri_inventario_fondi }}{% endif %}
+                {% if mic.piedi %}<tr><th>Piedi<td class="text-right">{{ mic.piedi }}<td>{{ mic.numeri_inventario_piedi }}{% endif %}
+            </tbody>
+            <tfooter>
+                <tr><th>Totale<td class="text-right">{{ mic.orli|add:mic.anse|add:mic.pareti|add:mic.fondi|add:mic.piedi }}<td>&nbsp;
+            </tfooter>
+        </table>
+    </div>
+</div>
+{% endblock %}

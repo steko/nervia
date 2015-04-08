@@ -1,0 +1,16 @@
+{% extends "magazzino/classedimateriale_base.html" %}
+
+{% block content %}
+<h1>Classi di materiale</h1>
+
+{% regroup cdm|dictsort:'famiglia' by famiglia as cdm_list %}
+
+{% for fam in cdm_list %}
+<h2>{{ fam.grouper }}</h2>
+<ul>
+{% for item in fam.list %}
+    <li><a href="{% url 'magazzino:classedimateriale_detail' item.sigla %}">{{ item.sigla }}</a> ‒ {{ item.classe }}
+{% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}
