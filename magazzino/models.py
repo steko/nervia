@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.core.urlresolvers import reverse
 from django.core.validators import RegexValidator
 
 # Create your models here.
@@ -198,8 +199,8 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
                             help_text='Specifiche: corridoio, colonna',
                             max_length=50)
 
-    # DT CRONOLOGIA 
-    ## DTZ CRONOLOGIA GENERICA 
+    # DT CRONOLOGIA
+    ## DTZ CRONOLOGIA GENERICA
     dtzg = models.CharField('DTZG',
                             help_text='Fascia cronologica di riferimento',
                             max_length=50)
@@ -225,21 +226,21 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
                            choices=DTM_CHOICES)
 
     # MA MATERIALE
-    ## MAC MATERIALE COMPONENTE 
+    ## MAC MATERIALE COMPONENTE
     macc = models.CharField('MACC',
                             help_text='Categoria: es. ceramica oppure ceramica/vetro/metallo',
                             max_length=100)
     macq = models.CharField('MACQ', help_text='Quantità', max_length=100)
 
-    # TU CONDIZIONE GIURIDICA E VINCOLI 
-    ## CDG CONDIZIONE GIURIDICA 
+    # TU CONDIZIONE GIURIDICA E VINCOLI
+    ## CDG CONDIZIONE GIURIDICA
     cdgg = models.CharField('CDGG',
                             help_text='Condizione giuridica - Indicazione generica',
                             max_length=50,
                             default='proprietà Stato')
 
-    # AD ACCESSO AI DATI 
-    ## ADS SPECIFICHE DI ACCESSO AI DATI 
+    # AD ACCESSO AI DATI
+    ## ADS SPECIFICHE DI ACCESSO AI DATI
     ADSP_CHOICES = (
         ('1', 'intera scheda visibile'),
         ('2', 'limitazione per privacy e tutela')
@@ -268,8 +269,8 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
     draa = models.CharField('DRAA', help_text='autore', max_length=50)
     drad = models.CharField('DRAD', help_text='data', max_length=25)
 
-    # CM COMPILAZIONE 
-    ## CMP COMPILAZIONE 
+    # CM COMPILAZIONE
+    ## CMP COMPILAZIONE
     cmpd = models.DateField('CMPD', help_text='Data')
     cmpn = models.CharField('CMPN', help_text='Nome', max_length=70)
     fur = models.CharField('FUR', help_text='Funzionario responsabile', max_length=70)
@@ -277,10 +278,10 @@ nel formato AAAA/MM/GG. Esempi: 2002/03/25, 2004/00/00, 2005/07/21-2005/10/12.''
     objects = CassaManager()
 
     def natural_key(self):
-        return (self.vano.get_magazzino_display(), self.number)
+        return (self.number)
 
     def __unicode__(self):
-        return u'%s %s' % (self.ldcn.get_magazzino_display(), self.number)
+        return u'Cassa {}'.format(self.number)
 
     class Meta:
         verbose_name_plural = "casse"
@@ -380,23 +381,28 @@ oppure intervalli di numeri separati da trattino es. 123-126'''
 
     orli = models.IntegerField(default=0)
     numeri_inventario_orli = models.CharField(max_length=500,
-                                              help_text=help_text_inv)
+                                              help_text=help_text_inv,
+                                              blank=True)
 
     anse = models.IntegerField(default=0)
     numeri_inventario_anse = models.CharField(max_length=500,
-                                              help_text=help_text_inv)
+                                              help_text=help_text_inv,
+                                              blank=True)
 
     fondi = models.IntegerField(default=0)
     numeri_inventario_fondi = models.CharField(max_length=500,
-                                               help_text=help_text_inv)
+                                               help_text=help_text_inv,
+                                               blank=True)
 
     piedi = models.IntegerField(default=0)
     numeri_inventario_piedi = models.CharField(max_length=500,
-                                               help_text=help_text_inv)
+                                               help_text=help_text_inv,
+                                               blank=True)
 
     pareti = models.IntegerField(default=0)
     numeri_inventario_pareti = models.CharField(max_length=500,
-                                                help_text=help_text_inv)
+                                                help_text=help_text_inv,
+                                                blank=True)
 
     nme = models.IntegerField('NME',
                               help_text='Numero minimo di esemplari',
@@ -404,6 +410,9 @@ oppure intervalli di numeri separati da trattino es. 123-126'''
 
     def __unicode__(self):
         return u'%s in %s da %s in %s' % (self.macd, self.macl, self.contesto, self.cassa)
+
+    def get_absolute_url(self):
+            return reverse('materialeincassa-detail', kwargs={'pk': self.pk})
 
     class Meta:
         verbose_name_plural = "materiali in cassa"
