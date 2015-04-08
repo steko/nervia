@@ -3,7 +3,7 @@
 from django.contrib import admin
 from magazzino.models import *
 
-for m in Scavo, Vano, FormaDiMateriale:
+for m in Scavo, Vano:
     admin.site.register(m)
 
 class ClasseAdmin(admin.ModelAdmin):
@@ -62,6 +62,11 @@ class CassaAdmin(admin.ModelAdmin):
 class ContestoAdmin(admin.ModelAdmin):
     inlines = [MaterialeInline]
 
+class FormaAdmin(admin.ModelAdmin):
+    list_display = ('forma', 'famiglia')
+    list_filter = ['famiglia']
+
 admin.site.register(Cassa, CassaAdmin)
 admin.site.register(ContestoScavo, ContestoAdmin)
 admin.site.register(ClasseDiMateriale, ClasseAdmin)
+admin.site.register(FormaDiMateriale, FormaAdmin)
