@@ -1,0 +1,38 @@
+# YAML 1.2
+# Metadata for citation of this software according to the CFF format (https://citation-file-format.github.io/)
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: 'steko/nervia: ArcheoFOSS 2013'
+abstract: "Management system for physical storage of archaeological finds compatible with Italy standards from ICCD"
+identifiers:
+  - description: The main Zenodo snapshot
+    type: doi
+    value: https://doi.org/10.5281/zenodo.5248935
+authors:
+- given-names: Stefano
+  family-names: Costa
+  affiliation: Ministero della Cultura
+  orcid: "https://orcid.org/0000-0003-1124-3174"
+version: '0.1'
+date-released: 2021-08-24
+repository-code: https://github.com/steko/nervia
+license: Apache-2.0
+preferred-citation:
+  title: "Scheda TMA (Tabella Materiali). Sviluppo di un database per la gestione del materiale archeologico dalla città antica di Albintimilium (Liguria)"
+  authors:
+    - family-names: Gambaro
+      given-names: Luigi
+    - family-names: Costa
+      given-names: Stefano
+      orcid: "https://orcid.org/0000-0003-1124-3174"
+  pages: 259-266
+  type: conference-paper
+  editors:
+    - family-names: Stanco
+      given-names: Filippo
+    - family-names: Gallo
+      given-names: Giovanni
+  isbn: 9781784912604
+  volume-title: "Free, libre and open source software e open format nei processi di ricerca archeologica: VIII Edizione Catania 2013"
+  url: "http://www.archaeopress.com/ArchaeopressShop/Public/displayProductDetail.asp?id={73A8F951-90D3-472B-A110-691662CEE50A}"
+  year: 2016
